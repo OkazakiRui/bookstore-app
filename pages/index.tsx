@@ -5,10 +5,10 @@ import { useBooks } from "../src/hooks/api/useBooks";
 
 const Home: NextPage = () => {
   useEffect(() => {
-    fetch("/api/books")
+    fetch("/api/stripe/products")
       .then((res) => res.json())
       .then(console.log);
-  });
+  }, []);
   const { books, isLoading } = useBooks();
 
   return (
